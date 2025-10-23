@@ -1,29 +1,20 @@
 "use client";
-import { useState } from "react";
+
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function CallToAction() {
-  const [status, setStatus] = useState("");
+  const [state, handleSubmit] = useForm("xzzjlqpb");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    const response = await fetch("https://formspree.io/f/xzzjlqpb", {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
-    });
-
-    if (response.ok) {
-      form.reset();
-      setStatus("success");
-    } else {
-      setStatus("error");
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center px-6">
+        <h2 className="text-3xl md:text-4xl font-bold">You're In! 🎉</h2>
+        <p className="mt-3 text-green-600">
+          Thanks for joining — we’ll notify you when Make It Whole Again launches.
+        </p>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center px-6">
@@ -39,31 +30,25 @@ export default function CallToAction() {
         className="flex flex-col sm:flex-row gap-4 justify-center mt-6"
       >
         <input
+          id="email"
           type="email"
           name="email"
           placeholder="Enter your email"
           required
           className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 w-full sm:w-80"
         />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+
         <button
           type="submit"
+          disabled={state.submitting}
           className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
         >
-          Get Early Access
+          {state.submitting ? "Submitting..." : "Get Early Access"}
         </button>
       </form>
 
-      {status === "sending" && (
-        <p className="mt-4 text-gray-500 animate-pulse">
-          Sending your request...
-        </p>
-      )}
-      {status === "success" && (
-        <p className="mt-4 text-green-600 font-medium">
-          ✅ Thank you! You’re on the list.
-        </p>
-      )}
-      {status === "error" && (
+      {state.errors?.length > 0 && (
         <p className="mt-4 text-red-600 font-medium">
           ⚠️ Something went wrong. Please try again later.
         </p>

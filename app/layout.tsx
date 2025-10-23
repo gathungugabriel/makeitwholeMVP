@@ -1,64 +1,60 @@
-"use client";
+// app/layout.tsx or app/layout.js
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
-import { useForm, ValidationError } from "@formspree/react";
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-export default function CallToAction() {
-  const [state, handleSubmit] = useForm("xzzjlqpb");
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-  if (state.succeeded) {
-    return (
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-700">
-          ✅ You’re on the list!
-        </h2>
-        <p className="mt-2 text-gray-600">
-          Thanks for joining Make It Whole Again.  
-          We’ll notify you when we launch.
-        </p>
-      </section>
-    );
-  }
+export const metadata: Metadata = {
+  title: "Make It Whole Again",
+  description:
+    "Buy, sell, or trade missing gadget parts — complete your gear, reduce waste, and save money.",
+  openGraph: {
+    title: "Make It Whole Again",
+    description:
+      "Complete your gadgets — find missing parts, reduce waste, and join a circular economy for tech.",
+    url: "https://your-domain.vercel.app", 
+    siteName: "Make It Whole Again",
+    images: [
+      {
+        url: "/FullLogo_NoBuffer.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "Make It Whole Again Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center px-6">
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Ready to complete your gear?
-      </h2>
-      <p className="mt-2 text-gray-600">
-        Join early and get exclusive access to the Make It Whole Again marketplace.
-      </p>
-
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col sm:flex-row gap-4 justify-center mt-6"
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          placeholder="Enter your email"
-          className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 w-full sm:w-80"
-        />
-        <ValidationError
-          prefix="Email"
-          field="email"
-          errors={state.errors}
-          className="text-red-600 text-sm"
-        />
-
-        <button
-          type="submit"
-          disabled={state.submitting}
-          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
-        >
-          {state.submitting ? "Sending..." : "Get Early Access"}
-        </button>
-      </form>
-
-      <p className="mt-4 text-gray-500 text-sm">
-        Your email is safe — we’ll only notify you when we launch.
-      </p>
-    </section>
+        {children}
+        {/* 👇 Add this line to enable free Vercel Analytics */}
+        <Analytics />
+      </body>
+    </html>
   );
 }
