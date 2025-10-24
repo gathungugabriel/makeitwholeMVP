@@ -1,4 +1,4 @@
-// app/layout.tsx or app/layout.js
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -18,15 +18,19 @@ export const metadata: Metadata = {
   title: "Make It Whole Again",
   description:
     "Buy, sell, or trade missing gadget parts — complete your gear, reduce waste, and save money.",
+  metadataBase: new URL("https://makeitwholeagainmvp.vercel.app"),
+  alternates: {
+    canonical: "https://makeitwholeagainmvp.vercel.app",
+  },
   openGraph: {
     title: "Make It Whole Again",
     description:
       "Complete your gadgets — find missing parts, reduce waste, and join a circular economy for tech.",
-    url: "https://your-domain.vercel.app", 
+    url: "https://makeitwholeagainmvp.vercel.app",
     siteName: "Make It Whole Again",
     images: [
       {
-        url: "/FullLogo_NoBuffer.jpg", 
+        url: "/FullLogo_NoBuffer.jpg", // optional if you’ve uploaded this file
         width: 1200,
         height: 630,
         alt: "Make It Whole Again Logo",
@@ -52,7 +56,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        {/* 👇 Add this line to enable free Vercel Analytics */}
+        {/* 👇 Vercel Analytics to monitor usage */}
         <Analytics />
       </body>
     </html>
