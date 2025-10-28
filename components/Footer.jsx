@@ -11,14 +11,6 @@ export default function Footer() {
     <footer className="bg-emerald-950 text-gray-200 py-14 text-center">
       <div className="max-w-5xl mx-auto px-6 space-y-8">
 
-        {/* Call to action */}
-        <h2 className="text-2xl sm:text-3xl font-bold">
-          Ready to complete your gear?
-        </h2>
-        <p className="text-gray-300">
-          Join early and get exclusive access to the <span className="font-semibold">Make It Whole Again</span> marketplace.
-        </p>
-
         
         {/* Contact options */}
         <div className="space-y-3">
