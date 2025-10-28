@@ -11,7 +11,7 @@ export default function LandingPage() {
       <HowItWorks />
       <WhyItMatters />
       <SustainabilitySection />
-      <HeroSection />
+      <CallToAction />
     </div>
   );
 }
