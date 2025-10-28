@@ -1,8 +1,8 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import WhatsAppButton from "@/components/WhatsAppButton"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Make It Whole Again",
     images: [
       {
-        url: "/FullLogo_NoBuffer.jpg", // optional if you've uploaded this file
+        url: "/FullLogo_NoBuffer.jpg",
         width: 1200,
         height: 630,
         alt: "Make It Whole Again Logo",
@@ -56,7 +56,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        {/* Vercel Analytics to monitor usage */}
+        <WhatsAppButton /> {/* 👈 Floating WhatsApp button */}
         <Analytics />
       </body>
     </html>
