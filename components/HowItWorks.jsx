@@ -7,7 +7,7 @@ export default function HowItWorks() {
     {
       icon: <Camera size={40} className="text-emerald-600" />,
       title: "Post What You’re Missing (or Have to Offer)",
-      desc: "Upload a quick photo and describe the part or item you're looking for — or have lying around.",
+      desc: "Upload a quick photo and describe the part or item you're looking for, or have lying around.",
     },
     {
       icon: <Link size={40} className="text-emerald-600" />,
@@ -17,7 +17,7 @@ export default function HowItWorks() {
     {
       icon: <Lightbulb size={40} className="text-emerald-600" />,
       title: "Complete Your Gear, Affordably",
-      desc: "Trade, buy, or swap to finish what you started — no waste, no hassle.",
+      desc: "Trade, buy, or swap to finish what you started. No waste, no hassle.",
     },
   ];
 
