@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Make It Whole Again",
     images: [
       {
-        url: "/FullLogo_NoBuffer.jpg", // optional if you’ve uploaded this file
+        url: "/FullLogo_NoBuffer.jpg", // optional if you've uploaded this file
         width: 1200,
         height: 630,
         alt: "Make It Whole Again Logo",
@@ -56,7 +56,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        {/* 👇 Vercel Analytics to monitor usage */}
+        {/* Vercel Analytics to monitor usage */}
         <Analytics />
       </body>
     </html>
