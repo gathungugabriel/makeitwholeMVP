@@ -19,30 +19,7 @@ export default function Footer() {
           Join early and get exclusive access to the <span className="font-semibold">Make It Whole Again</span> marketplace.
         </p>
 
-        {/* Email form (Formspree) */}
-        <form
-          action="https://formspree.io/f/your-form-id" // ← Replace with your actual Formspree endpoint
-          method="POST"
-          className="flex flex-col sm:flex-row justify-center items-center gap-3"
-        >
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-            className="w-full sm:w-auto px-5 py-3 rounded-2xl text-gray-900 focus:outline-none"
-          />
-          <Button
-            type="submit"
-            className="bg-emerald-600 text-white hover:bg-emerald-700"
-          >
-            Get Early Access
-          </Button>
-        </form>
-
-        {/* Divider */}
-        <div className="border-t border-emerald-800 my-6"></div>
-
+        
         {/* Contact options */}
         <div className="space-y-3">
           <h3 className="text-lg font-semibold">Get in Touch</h3>
