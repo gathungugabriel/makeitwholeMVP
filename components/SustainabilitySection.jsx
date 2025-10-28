@@ -33,20 +33,22 @@ export default function SustainabilitySection() {
           <h2 className="text-4xl font-bold text-emerald-800 mb-6">
             Make It Whole Again 🌍
           </h2>
+
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Every year, millions of perfectly good gadgets and accessories are
-            discarded just because one small part is missing — a lost earbud, a
-            missing charger, a single strap.
+            What if every misplaced earbud, forgotten charger, or unmatched strap
+            could find its way back to purpose? <strong>Make It Whole Again</strong> 
+            was built on that simple idea — giving perfectly good items a second chance.
           </p>
+
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            <strong>Make It Whole Again</strong> connects people who have those
-            missing pieces. Save money, reduce waste, and help the planet one
-            match at a time.
+            We connect people who have what others are missing. Together, we 
+            save money, reduce waste, and make sustainability effortless — one match at a time.
           </p>
+
           <p className="text-lg text-gray-700 leading-relaxed">
-            Whether you're a buyer looking to complete your item, or a seller
-            hoping to give your leftover piece a new life — we make it simple,
-            safe, and rewarding.
+            Whether you’re completing your favorite gadget or helping someone else 
+            finish theirs, every connection brings us closer to a world that values 
+            what’s already here.
           </p>
         </motion.div>
       </div>
