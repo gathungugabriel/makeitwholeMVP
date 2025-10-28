@@ -11,11 +11,11 @@ export default function HeroSection() {
         className="max-w-3xl mx-auto px-6"
       >
         <h1 className="text-5xl font-bold text-emerald-900 mb-6">
-          Make It Whole Again —{" "}
+          Make It Whole Again{" "}
           <span className="text-emerald-600">Buy, Sell, or Trade Missing Gadget Parts</span>
         </h1>
         <p className="text-lg text-gray-700 mb-8">
-          Lost a charger, an earbud, or a matching strap? Don’t replace — complete your gear.  
+          Lost a charger, an earbud, or a matching strap? Don’t replace—complete your gear.  
           Join the marketplace built for second chances.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
