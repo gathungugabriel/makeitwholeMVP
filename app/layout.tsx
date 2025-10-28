@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Make It Whole Again",
   description:
-    "Buy, sell, or trade missing gadget parts — complete your gear, reduce waste, and save money.",
+    "Buy, sell, or trade missing gadget parts to complete your gear, reduce waste, and save money.",
   metadataBase: new URL("https://makeitwholeagainmvp.vercel.app"),
   alternates: {
     canonical: "https://makeitwholeagainmvp.vercel.app",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Make It Whole Again",
     description:
-      "Complete your gadgets — find missing parts, reduce waste, and join a circular economy for tech.",
+      "Complete your gadgets, find missing parts, reduce waste, and join a circular economy for technology.",
     url: "https://makeitwholeagainmvp.vercel.app",
     siteName: "Make It Whole Again",
     images: [

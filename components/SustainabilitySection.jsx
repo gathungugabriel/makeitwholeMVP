@@ -37,12 +37,12 @@ export default function SustainabilitySection() {
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             What if every misplaced earbud, forgotten charger, or unmatched strap
             could find its way back to purpose? <strong>Make It Whole Again</strong> 
-            was built on that simple idea — giving perfectly good items a second chance.
+            was built on that simple idea,giving perfectly good items a second chance.
           </p>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             We connect people who have what others are missing. Together, we 
-            save money, reduce waste, and make sustainability effortless — one match at a time.
+            save money, reduce waste, and make sustainability effortless, one match at a time.
           </p>
 
           <p className="text-lg text-gray-700 leading-relaxed">
