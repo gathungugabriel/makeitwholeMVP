@@ -11,14 +11,15 @@ export default function Footer() {
     <footer className="bg-emerald-950 text-gray-200 py-14 text-center">
       <div className="max-w-5xl mx-auto px-6 space-y-8">
 
-        
         {/* Contact options */}
         <div className="space-y-3">
           <h3 className="text-lg font-semibold">Get in Touch</h3>
           <p className="text-gray-400 text-sm">
             Got an idea, feedback, or just want to say hi? 💬 I’d love to hear from you!
           </p>
+
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+            {/* WhatsApp Chat Button */}
             <a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
               target="_blank"
@@ -28,7 +29,13 @@ export default function Footer() {
                 💬 Chat on WhatsApp
               </Button>
             </a>
-            <a href="mailto:makeitwholeagain@gmail.com">
+
+            {/* Email Button */}
+            <a
+              href="mailto:generalgab630@gmail.com?subject=Feedback%20on%20Make%20It%20Whole%20Again&body=Hey%20Gabriel%2C%0A%0AI%20just%20checked%20out%20Make%20It%20Whole%20Again%20and%20wanted%20to%20share%20some%20thoughts..."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="bg-emerald-700 text-white hover:bg-emerald-800">
                 ✉️ Send Email
               </Button>
